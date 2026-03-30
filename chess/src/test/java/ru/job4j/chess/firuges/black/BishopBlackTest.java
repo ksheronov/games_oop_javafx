@@ -51,6 +51,8 @@ public class BishopBlackTest {
                     Cell[] result = black.way(newCell);
                 }
         );
-        assertThat(exception.getMessage()).isEqualTo(String.format("Could not move by diagonal from %s to %s", black.position(), newCell));
+        assertThat(exception.getMessage())
+                .isEqualTo(String.format("Could not move by diagonal"
+                        + " from %s to %s", black.position(), newCell));
     }
 }
